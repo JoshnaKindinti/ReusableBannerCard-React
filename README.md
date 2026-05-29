@@ -1,90 +1,32 @@
-In this project, let's build **Reusable Banners** by applying the concepts we have learned till now.
+## 📝 Project Description
 
-### Refer to the image below:
+This project is a dynamic, responsive web application built using **React.js**. It demonstrates a clean implementation of reusable functional components and unidirectional data flow. 
 
-<br/>
-<div style="text-align: center;">
-<img src="https://assets.ccbp.in/frontend/content/react-js/resuable-banners-lg-output.png" alt="resuable-banners-output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
+The application dynamically renders a collection of promotional banners (cards) from a central data array. By leveraging React props, a single blueprint component (`BannerCardItem`) is reused to generate multiple cards, each featuring unique text content and distinct background themes defined via custom CSS classes. 
 
-### Design Files
+### Key Features:
+* **Dynamic Rendering:** Uses JavaScript's `.map()` method to seamlessly loop through data and render UI elements.
+* **Component Reusability:** Features a highly reusable child component that adapts completely based on incoming properties.
+* **Conditional/Dynamic Styling:** Utilizes ES6 template literals to apply unique class names to individual cards for specific background variations.
+* **Clean Code Architecture:** Keeps data management and UI representation separate for better maintainability.
 
-<details>
-<summary>Click to view</summary>
+---
 
-- [Extra Small (Size < 576px), Small (Size >= 576px), Medium (Size >= 768px)](https://assets.ccbp.in/frontend/content/react-js/reusable-banners-sm-output-v2.png)
-- [Large (Size >= 992px) and Extra Large (Size >= 1200px)](https://assets.ccbp.in/frontend/content/react-js/resuable-banners-lg-output.png)
+## 📁 Project Structure
 
-</details>
+The project follows a standard React directory structure, organizing components into dedicated subfolders for modularity:
 
-### Set Up Instructions
-
-<details>
-<summary>Click to view</summary>
-
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
-
-### Completion Instructions
-
-<details>
-<summary>Functionality to be added</summary>
-<br/>
-
-The app must have the following functionalities
-
-- The App is provided with `bannerCardsList`. It consists of a list of bannerCardItem objects with the following properties in each bannerCardItem object
-
-  |     Key     | Data Type |
-  | :---------: | :-------: |
-  |     id      |  Number   |
-  | headerText  |  String   |
-  | description |  String   |
-  |  className  |  String   |
-
-- The value of the key `id` should be used as a key to the `BannerCardItem` component.
-- The value of the key `className` should be used as a className for the HTML list item in the `BannerCardItem` component.
-
-</details>
-
-<details>
-<summary>Implementation Files</summary>
-<br/>
-
-Use these files to complete the implementation:
-
-- `src/App.js`
-- `src/App.css`
-- `src/components/BannerCardItem/index.js`
-- `src/components/BannerCardItem/index.css`
-</details>
-
-### Resources
-
-<details>
-<summary>Colors</summary>
-
-<br/>
-
-<div style="background-color: #cbced2; width: 150px; padding: 10px; color: black">Hex: #cbced2</div>
-<div style="background-color: #64748b; width: 150px; padding: 10px; color: white">Hex: #64748b</div>
-<div style="background-color: #ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
-<div style="background-color: #326a9d; width: 150px; padding: 10px; color: white">Hex: #326a9d</div>
-
-</details>
-
-<details>
-<summary>Font-families</summary>
-
-- Roboto
-
-</details>
-
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
+```text
+my-app/
+├── public/
+│   └── index.html          # The main HTML page template
+├── src/
+│   ├── components/         # Directory for reusable UI components
+│   │   └── BannerCardItem/
+│   │       ├── index.js    # BannerCardItem component logic & JSX
+│   │       └── index.css   # Styles specific to the BannerCardItem
+│   ├── App.css             # Main container and global layout styles
+│   ├── App.js              # Root component containing data array and mapping logic
+│   └── index.js            # JavaScript entry point that renders App.js to the DOM
+├── package.json            # Project metadata and dependencies
+└── README.md               # Project documentation
